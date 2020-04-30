@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = 'mongodb+srv://Boyle:jeddy1234@paddy-photodb-o2y1x.mongodb.net/paddy_photodb?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = os.environ.get('DADS_API')
 mongo = PyMongo(app)
 
 app = Flask(__name__)
